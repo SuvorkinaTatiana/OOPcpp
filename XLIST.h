@@ -87,7 +87,7 @@ public:
 			throw XListException();
 		else {
 			Node<T>* tmp =  m_head;
-			m_first = m_first->next;
+			m_head = m_head->next;
 			delete tmp;
 			--m_size;
 		}
@@ -98,7 +98,7 @@ public:
 			throw XListException();
 		else {
 			Node<T>* tmp = m_tail;
-			m_tail= m_last->prev;
+			m_tail= m_tail->prev;
 			delete tmp;
 			--m_size;
 		}
